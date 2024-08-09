@@ -115,7 +115,7 @@ img {
 
 /* HERO */
 #hero {
-    background: linear-gradient(rgba(116, 109, 22, 0.3), rgba(116, 109, 22, 0.7)), url(../images/fachadaIgle1.jpg);
+    background: linear-gradient(rgba(116, 109, 22, 0.3), rgba(116, 109, 22, 0.7)), url(../images/ani2home.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -323,4 +323,61 @@ footer .line {
     background-color: var(--c-brand);
     color: white;
 }
+
+/* QUIENES SOMOS */
+#quienes {
+    position: relative;
+    z-index: 2;
+}
+
+#quienes::after {
+    content: "";
+    width: 100%;
+    height: 90%;
+    background: linear-gradient(rgba(211, 198, 19, 0.911), rgba(96, 92, 22, 0.823)), url(../images/ibs3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#quienes .form-control {
+    border-radius: 0;
+}
+
+#quienes .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+
+/* SECTION TITLE */
+#reseña {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+.reseña-title {
+    margin-bottom: 60px;
+}
+
+.reseña-title .line {
+    width: 80px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin: 16px auto 24px auto;
+}
+
+.reseña-title p {
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+
+
+
+
+
 
