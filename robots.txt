@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+
+# Bloquear el acceso a cualquier página de búsqueda
+Disallow: /?s=
+
+# Permitir el acceso a todos los robots al resto del sitio
+Allow: /
+
+Sitemap: https://www.iglesia-ibs.com/sitemap.xml
