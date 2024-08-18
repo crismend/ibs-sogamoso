@@ -116,6 +116,24 @@ img {
     color: white;
 }
 
+.social-iconsW a {
+    color: rgb(37, 211, 102);
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(236, 229, 221);
+    border-radius: 100px;
+    margin-top: 0.2rem;
+    margin-left: 0.5rem;
+}
+
+.social-iconsW a:hover {
+    background-color: rgb(37, 211, 102);
+    color: white;
+}
+
 
 /* HERO */
 #hero {
