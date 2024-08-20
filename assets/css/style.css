@@ -175,6 +175,13 @@ img {
     flex: none;
 }
 
+.imagen-con-estilo {
+    border-radius: 15px; /* Ajusta el valor para mayor o menor redondez */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    max-width: 100%; /* Asegura que la imagen no desborde el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
 /* SERVICE */
 .service {
     position: relative;
