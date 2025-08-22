@@ -11,6 +11,28 @@ AOS.init({
 
 });
 
+// Hace funcional cualquier <a.gps-link> usando dirección o lat/lng
+(function () {
+  const buildMapsUrl = (el, mode = "search") => {
+    const lat = el.dataset.lat, lng = el.dataset.lng;
+    if (lat && lng) {
+      const q = `${lat},${lng}`;
+      return mode === "directions"
+        ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(q)}`
+        : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+    }
+    const q = (el.dataset.address || "").trim();
+    if (!q) return null;
+    return mode === "directions"
+      ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(q)}`
+      : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+  }
 
-
-
+  document.querySelectorAll(".gps-link").forEach(a => {
+    const href = buildMapsUrl(a); // usa "search"; cambia a buildMapsUrl(a,"directions") si quieres ruta
+    if (!href) return;
+    a.href = href;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+  });
+})();
